@@ -1,0 +1,464 @@
+.people-list-container {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 120px);
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  gap: 24px;
+}
+
+.title-section {
+  flex: 1;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 8px 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #1976d2;
+}
+
+.title-icon {
+  font-size: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.page-subtitle {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 400;
+}
+
+.actions-section {
+  display: flex;
+  align-items: center;
+}
+
+.add-fab {
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+  transition: all 0.3s ease;
+}
+
+.add-fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(25, 118, 210, 0.4);
+}
+
+/* Main Card */
+.main-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.main-card.loading {
+  opacity: 0.7;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 40px;
+  gap: 20px;
+}
+
+.loading-text {
+  margin: 0;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* No Data State */
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 40px;
+  text-align: center;
+  color: #666;
+}
+
+.no-data-icon {
+  margin-bottom: 24px;
+}
+
+.no-data-icon mat-icon {
+  font-size: 4rem;
+  width: 4rem;
+  height: 4rem;
+  color: #ccc;
+}
+
+.no-data h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.no-data p {
+  margin: 0 0 24px 0;
+  font-size: 1rem;
+  max-width: 400px;
+}
+
+/* Table Section */
+.table-container {
+  padding: 0;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fafafa;
+}
+
+.table-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* Table Styles */
+.people-table {
+  width: 100%;
+  background: white;
+}
+
+.table-header-row {
+  background-color: #f8f9fa;
+  height: 56px;
+}
+
+.table-header-row th {
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.table-row {
+  height: 72px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.table-row:hover {
+  background-color: #f5f7fa;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-row.highlighted {
+  background-color: #e3f2fd;
+  border-left: 4px solid #1976d2;
+}
+
+/* Column Styles */
+.avatar-column {
+  width: 60px;
+  text-align: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1976d2, #42a5f5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+}
+
+.name-cell {
+  min-width: 280px;
+  padding: 16px 12px;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.name-row,
+.age-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 24px;
+}
+
+.name-label,
+.age-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #666;
+  min-width: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.full-name {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+  flex: 1;
+}
+
+.age-value {
+  font-size: 0.875rem;
+  color: #1976d2;
+  flex: 1;
+}
+
+.contact-cell {
+  min-width: 320px;
+  padding: 16px 12px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.phone-row,
+.gender-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 24px;
+}
+
+.contact-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #666;
+  min-width: 80px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-value {
+  font-size: 0.875rem;
+  color: #555;
+  flex: 1;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.contact-icon {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  color: #999;
+}
+
+.no-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px dashed #dee2e6;
+}
+
+.no-contact-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.actions-column {
+  width: 120px;
+  text-align: center;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.action-buttons button {
+  transition: all 0.2s ease;
+}
+
+.action-buttons button:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .people-list-container {
+    padding: 16px;
+  }
+
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .actions-section {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .people-list-container {
+    padding: 12px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .title-icon {
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .table-header {
+    padding: 16px;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .name-cell {
+    min-width: 240px;
+    padding: 12px 8px;
+  }
+
+  .contact-cell {
+    min-width: 280px;
+    padding: 12px 8px;
+  }
+
+  .name-row,
+  .email-row,
+  .phone-row,
+  .address-row {
+    gap: 8px;
+    min-height: 20px;
+  }
+
+  .name-label,
+  .email-label {
+    min-width: 45px;
+    font-size: 0.8rem;
+  }
+
+  .contact-label {
+    min-width: 70px;
+    font-size: 0.8rem;
+  }
+
+  .full-name {
+    font-size: 0.9rem;
+  }
+
+  .email-value,
+  .contact-value {
+    font-size: 0.8rem;
+  }
+
+  .table-row {
+    height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-section {
+    text-align: center;
+    align-items: center;
+  }
+
+  .actions-section {
+    align-self: center;
+  }
+
+  .name-cell {
+    min-width: 200px;
+    padding: 10px 6px;
+  }
+
+  .contact-cell {
+    min-width: 220px;
+    padding: 10px 6px;
+  }
+
+  .name-row,
+  .email-row,
+  .phone-row,
+  .address-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    min-height: auto;
+  }
+
+  .name-label,
+  .email-label,
+  .contact-label {
+    min-width: auto;
+    font-size: 0.75rem;
+    margin-bottom: 2px;
+  }
+
+  .full-name {
+    font-size: 0.85rem;
+    margin-left: 8px;
+  }
+
+  .email-value,
+  .contact-value {
+    font-size: 0.75rem;
+    margin-left: 8px;
+  }
+
+  .table-row {
+    height: 110px;
+  }
+
+  .no-contact {
+    padding: 8px;
+  }
+
+  .no-contact-text {
+    font-size: 0.75rem;
+  }
+}
