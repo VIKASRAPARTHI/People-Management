@@ -1,0 +1,31 @@
+{
+  "name": "people-management-vercel-deployment",
+  "version": "1.0.0",
+  "description": "Complete Vercel deployment setup for People Management App",
+  "scripts": {
+    "verify": "node verify-deployment.js",
+    "deploy": "bash deploy-to-vercel.sh",
+    "deploy:windows": "deploy-to-vercel.bat",
+    "build:frontend": "cd Frontend && npm run build",
+    "build:backend": "cd Backend && npm install",
+    "build:all": "npm run build:backend && npm run build:frontend",
+    "install:all": "cd Frontend && npm install && cd ../Backend && npm install",
+    "start:frontend": "cd Frontend && npm start",
+    "start:backend": "cd Backend && npm run dev"
+  },
+  "keywords": [
+    "vercel",
+    "deployment",
+    "angular",
+    "nodejs",
+    "mongodb",
+    "fullstack"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "18.x"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
