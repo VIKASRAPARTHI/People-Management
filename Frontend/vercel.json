@@ -1,8 +1,14 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/people-manager",
-  "installCommand": "npm install",
-  "framework": "angular",
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/people-manager"
+      }
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
